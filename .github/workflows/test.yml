@@ -37,8 +37,8 @@ jobs:
           node-version: 18
       - name: install dependencies
         run: npm ci
-      - name: build proj
-        run: npm run build
+      - name: Build project
+        run: npx vite build
       - name: upload artifact
         uses: actions/upload-artifact@v3
         with:
