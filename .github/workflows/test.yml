@@ -43,6 +43,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dist-files
-          path: dist 
+          path: dist/ 
       - name: deploy
         run: echo "deploying proj"
