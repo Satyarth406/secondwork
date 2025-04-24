@@ -40,7 +40,7 @@ jobs:
       - name: build proj
         run: npm run build
       - name: upload artifact
-        users: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: dist-files
           path: dist 
