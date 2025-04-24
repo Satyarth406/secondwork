@@ -22,6 +22,7 @@ jobs:
         run: npm test
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -34,5 +35,10 @@ jobs:
         run: npm ci
       - name: build proj
         run: npm run build
+      - name: upload artifact
+        users: actions/upload-artifact@v3
+        with:
+          name: dist-files
+          path: dist 
       - name: deploy
         run: echo "deploying proj"
