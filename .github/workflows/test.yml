@@ -20,6 +20,10 @@ jobs:
         run: npm ci
       - name: run tests
         run: npm test
+      - name: Check Vite version (debug)
+        run: npx vite --version
+      - name: Build project
+        run: npx vite build
 
   deploy:
     needs: test
